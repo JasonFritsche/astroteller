@@ -1,13 +1,21 @@
-/* src/App.jsx */
-import React from "react";
-import "./index.css";
+import Navbar from './components/Navbar'
+import AstroContainer from './components/AstroContainer'
+import { Fragment } from 'react'
 
 function App() {
   return (
-    <div className="flex justify-center">
-      <h1 className="font-bold text-2xl text-blue-900">React and Tailwind with Vitejs!</h1>
-    </div>
-  );
+    <Fragment>
+      <Navbar />
+      <div className="row flex-center heading">
+        <div className="col">
+          <p>AstroTeller</p>
+        </div>
+        <div className="col-12 col">
+          <AstroContainer />
+        </div>
+      </div>
+    </Fragment>
+  )
 }
 
-export default App;
+export default App
