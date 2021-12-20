@@ -9,3 +9,7 @@
 .heading {
   padding-top: var(--navbar-height);
 }
+
+.astro-container {
+  width: 90vw;
+}
