@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import AstroCard from './AstroCard/AstroCard'
-import _ from 'lodash'
+import PlaceHolder from './PlaceHolder/PlaceHolder'
+import CrystalBallPng from '../../assets/crystalball.png'
 
 const ASTROLOGY_SIGNS = [
   'aries',
@@ -66,6 +67,13 @@ const AstroContainer = () => {
         </div>
         <div className="col-9 col">
           {showHoroscope && <AstroCard horoscope={horoscope} sign={sign} />}
+          {!showHoroscope && (
+            <PlaceHolder
+              imgSrc={CrystalBallPng}
+              descriptionText="Choose your sign to get your fortune"
+              maxHeight={12}
+            />
+          )}
         </div>
       </div>
     </div>
